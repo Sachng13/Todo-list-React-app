@@ -1,7 +1,17 @@
-
-function Todos() {
+import TodoItem from "./TodoItem";
+function Todos(props) {
     return (
-      <h1>Hiii</h1>
+       
+        <div className="todos-container">
+               {props.todos.map((item)=>{
+                 return <TodoItem item={item} 
+                 deleteTaskhandler={props.deleteTaskhandler}
+                 handlingToggleTask={props.handlingToggleTask}/>
+               })}
+               
+            
+        </div>
+      
     );
   }
   
