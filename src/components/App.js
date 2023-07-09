@@ -30,12 +30,14 @@ function App() {
   }, []);
 
   const addTodoHandler = () => {
+    if (addTodoInput == "") {
+      return
+    }
 
     const newTodo = {
       title: addTodoInput,
-      completed:false,
-      localId:Date.now().toString(),
-
+      completed: false,
+      localId: Date.now().toString(),
     }
     try {
       fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -47,7 +49,7 @@ function App() {
       })
         .then((response) => response.json())
         .then((json) => {
-          setTodos((prevState) => [ json,...prevState]);
+          setTodos((prevState) => [json, ...prevState]);
           toast.success("Todo added succesfully");
         });
       setAddTodoInput("");
@@ -60,20 +62,19 @@ function App() {
   const deleteTaskhandler = (e) => {
     try {
       fetch(`https://jsonplaceholder.typicode.com/todos/${e.target.id}`, {
-      method: 'DELETE',
-    });
+        method: 'DELETE',
+      });
     } catch (error) {
       toast.error("Some error occured")
     }
-    if (e.target.id>100){
-      console.log(e.target.id);
+    if (e.target.id > 100) {
       const delArray = todos.filter((todo) => {
         return todo.localId != e.target.id;
       });
-  
+
       setTodos(delArray);
       toast.success("Todo deleted succesfully");
-      return ;
+      return;
     }
     const delArray = todos.filter((todo) => {
       return todo.id != e.target.id;
@@ -85,9 +86,9 @@ function App() {
   }
 
   const handlingToggleTask = (e) => {
-    if (e.target.id>100){
+    if (e.target.id > 100) {
       const ToggledArray = todos.map((item) => {
-         if (item.localId == e.target.id) {
+        if (item.localId == e.target.id) {
           item.completed = !item.completed;
           return item;
         }
@@ -109,6 +110,28 @@ function App() {
   }
 
   const updateTaskHandler = () => {
+
+    if (addTodoInput==""){
+      return;
+    }    
+    if (editTaskId > 100) {
+      const updatedArray = todos.map((item) => {
+        if (item.localId == editTaskId) {
+          item.title = addTodoInput;
+          item.completed = false;
+          console.log(item);
+          return item;
+        }
+        return item;
+      })
+      setTodos(updatedArray);
+      toast.success("Todo updated succesfully");
+      setAddTodoInput("");
+      setEditTaskId(null);
+      return
+    }
+
+
     const updatedTask = {
       title: addTodoInput,
       completed: false
@@ -124,13 +147,13 @@ function App() {
       })
         .then((response) => response.json())
         .then((json) => {
-          const updatedArray=todos.map((item)=>{
-              if (item.id==editTaskId){
-                item.title=json.title;
-                item.completed=json.completed;
-                return item;
-              }
+          const updatedArray = todos.map((item) => {
+            if (item.id == editTaskId) {
+              item.title = json.title;
+              item.completed = json.completed;
               return item;
+            }
+            return item;
           })
           setTodos(updatedArray);
           toast.success("Todo updated succesfully");
@@ -138,7 +161,6 @@ function App() {
       setAddTodoInput("");
       setEditTaskId(null);
     } catch (error) {
-      console.log("error aa gya chacha " ,error);
       toast.error("Some error occured");
     }
 
@@ -146,6 +168,17 @@ function App() {
   }
 
   const handleEditTask = (e) => {
+
+    if (e.target.id > 100) {
+      setEditTaskId(e.target.id);
+      todos.forEach((item) => {
+        if (item.localId == e.target.id) {
+          setAddTodoInput(item.title);
+        }
+      })
+      return ;
+    }
+
     setEditTaskId(e.target.id);
     todos.forEach((item) => {
       if (item.id == e.target.id) {
