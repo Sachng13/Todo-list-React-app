@@ -1,3 +1,16 @@
+<h1>Todo List Using React </h1>
+<hr>
+<p>This is a simple Todo List application built using React. It allows users to add, edit, and delete tasks, mark tasks as completed, and filter tasks based on their completion status.</p>
+
+<h3>Features</h3>
+<ul>
+  <li>Add tasks: Users can enter new tasks in the input field and click the "Add" button to add them to the list.</li>
+  <li>Edit tasks: Users can click the edit icon next to a task to edit its title.</li>
+  <li>Delete tasks: Users can click the delete icon next to a task to delete it from the list.</li>
+  <li>Mark tasks as completed: Users can check the checkbox next to a task to mark it as completed.</li>
+</ul>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
