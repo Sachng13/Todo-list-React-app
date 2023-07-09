@@ -13,19 +13,20 @@
 <h3>Folder structure :-</h3>
 
 src/
-      components/
 <br>
-           App.js
+&nbsp;&nbsp;&nbsp;components/
 <br>
-           TodoItem.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;App.js
 <br>
-           AddTodo.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TodoItem.js
 <br>
-           Todos.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddTodo.js
 <br>
-index.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Todos.js
 <br>
-index.css
+&nbsp;&nbsp;&nbsp;index.js
+<br>
+&nbsp;&nbsp;&nbsp;index.css
         
 
 
