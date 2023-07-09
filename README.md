@@ -11,13 +11,16 @@
 </ul>
 
 <h3>Folder structure :-</h3>
-components/
+
+src/
+<br>
+&nbsp&nbsp&nbsp components/
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp App.js
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  TodoItem.js
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Todo.js
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AddTodo.js
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Todos.js
 <br>
