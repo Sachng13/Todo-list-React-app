@@ -95,9 +95,9 @@ function App() {
   }
   // function used to toggle the todo ;
   const handlingToggleTask = (e) => {
-     // checking is the todo is of server or we have added ;
+    // checking is the todo is of server or we have added ;
     if (e.target.id > 100) {
-       // in this we toggle the todos which we have added .
+      // in this we toggle the todos which we have added .
       const ToggledArray = todos.map((item) => {
         if (item.localId == e.target.id) {
           item.completed = !item.completed;
@@ -123,12 +123,12 @@ function App() {
   // function used to edit the task 
   const updateTaskHandler = () => {
     // checking if the input box empty;
-    if (addTodoInput==""){
+    if (addTodoInput == "") {
       return;
-    }    
-      // checking is the todo is of server or we have added ;
+    }
+    // checking is the todo is of server or we have added ;
     if (editTaskId > 100) {
-        // in this we update the todos which we have added .
+      // in this we update the todos which we have added .
       const updatedArray = todos.map((item) => {
         if (item.localId == editTaskId) {
           item.title = addTodoInput;
@@ -145,7 +145,7 @@ function App() {
       return
     }
 
-      // else in this we update the todos which are from the server;
+    // else in this we update the todos which are from the server;
     const updatedTask = {
       title: addTodoInput,
       completed: false
@@ -184,16 +184,16 @@ function App() {
   const handleEditTask = (e) => {
     // checking is the todo is of server or we have added ;
     if (e.target.id > 100) {
-        // in this we handle  the todos which we have added .
+      // in this we handle  the todos which we have added .
       setEditTaskId(e.target.id);
       todos.forEach((item) => {
         if (item.localId == e.target.id) {
           setAddTodoInput(item.title);
         }
       })
-      return ;
+      return;
     }
-       // else in this we handle the todos which are from the server;
+    // else in this we handle the todos which are from the server;
     setEditTaskId(e.target.id);
     todos.forEach((item) => {
       if (item.id == e.target.id) {
@@ -201,12 +201,12 @@ function App() {
       }
     })
   }
-   
+
 
   // our main part;
   return (
     <div className="container">
-      <ToastContainer />   
+      <ToastContainer />
       <div className="heading"><h1>Todo List App</h1></div>
       <AddTodo addTodoInput={addTodoInput}
         setAddTodoInput={setAddTodoInput}

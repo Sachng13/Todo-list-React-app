@@ -12,57 +12,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-  /* required styles ..... for all the components */
-.container{
+
+/* required styles ..... for all the components */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  }
-  .heading h1{
-    color: #b9dcbd;
-    background-color: #204382;
-    padding: 10px 10px;
-    border-radius: 10px;
-  }
-.Add-todo-input-box{
-  font-size: 1.5rem;
-    border-radius: 10px;
-    padding: 5px 10px;
-    border: 1px solid black;
-    width: 150px;
-    transition: width .35s ease-in-out;
-    background-color: #e9e9d1;
+
 }
-.Add-todo-input-box:focus{
+
+.heading h1 {
+  color: #b9dcbd;
+  background-color: #204382;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.Add-todo-input-box {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  width: 150px;
+  transition: width .35s ease-in-out;
+  background-color: #e9e9d1;
+}
+
+.Add-todo-input-box:focus {
   width: 450px;
   border: 1px solid #000000;
   box-shadow: 0px 0px 10px 2px #2b4db5;
   outline: none;
 }
-.Add-todo-form{
+
+.Add-todo-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 110px;
   justify-content: space-around;
 }
-.Add-todo-add-btn{
+
+.Add-todo-add-btn {
   padding: 8px 10px;
   font-size: 1.1rem;
   border-radius: 10px;
   border: 1px solid #2e82a5;
   background-color: cornflowerblue;
 }
-.Add-todo-add-btn:hover{
+
+.Add-todo-add-btn:hover {
   background-color: rgb(53 98 179);
   color: white;
   cursor: pointer;
 }
-.Add-todo-add-btn:active{
-  box-shadow:  rgb(91 122 218) 0px 0px 10px 1px;
+
+.Add-todo-add-btn:active {
+  box-shadow: rgb(91 122 218) 0px 0px 10px 1px;
 }
-.todo-item-container{
+
+.todo-item-container {
   display: flex;
   align-items: center;
   font-size: 1.6rem;
@@ -74,24 +83,29 @@ code {
   justify-content: space-between;
   margin: 10px 0px;
 }
-.todo-item-checkbox{
+
+.todo-item-checkbox {
   height: 25px;
   width: 25px;
   margin-right: 10px;
 }
-.edit-icon{
+
+.edit-icon {
   height: 30px;
   cursor: pointer;
 }
-.delete-icon{
+
+.delete-icon {
   height: 30px;
   cursor: pointer;
   margin-left: 10px;
 }
-.todo-item-checkbox:checked+label{
+
+.todo-item-checkbox:checked+label {
   text-decoration: line-through;
 }
-.todos-container{
+
+.todos-container {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -99,6 +113,7 @@ code {
   overflow-y: scroll;
   height: 330px
 }
-.todos-container::-webkit-scrollbar{
+
+.todos-container::-webkit-scrollbar {
   display: none;
 }
