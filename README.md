@@ -12,9 +12,7 @@
 
 <h3>Folder structure :-</h3>
 
-src/
-<br>
-&nbsp&nbsp&nbsp components/
+ components/
 <br>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp App.js
 <br>
