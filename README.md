@@ -10,6 +10,16 @@
   <li>Mark tasks as completed: Users can check the checkbox next to a task to mark it as completed.</li>
 </ul>
 
+<h3>Folder structure :-</h3>
+components/
+        App.js
+        TodoItem.js
+        Todo.js
+        Todos.js
+index.js
+index.css
+        
+
 
 # Getting Started with Create React App
 
