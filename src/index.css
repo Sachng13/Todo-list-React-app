@@ -12,7 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+  /* required styles ..... for all the components */
 .container{
   display: flex;
   flex-direction: column;

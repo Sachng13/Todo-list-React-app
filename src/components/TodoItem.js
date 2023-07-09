@@ -1,5 +1,6 @@
 
 function TodoItem(props) {
+  // a todo item structure ;
     return (
      
       <div className="todo-item-container">
