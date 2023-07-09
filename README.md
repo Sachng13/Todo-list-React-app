@@ -12,15 +12,16 @@
 
 <h3>Folder structure :-</h3>
 
- components/
+src/
+      components/
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp App.js
+           App.js
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  TodoItem.js
+           TodoItem.js
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp AddTodo.js
+           AddTodo.js
 <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Todos.js
+           Todos.js
 <br>
 index.js
 <br>
