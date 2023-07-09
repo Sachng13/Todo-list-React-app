@@ -12,11 +12,17 @@
 
 <h3>Folder structure :-</h3>
 components/
-        App.js
-        TodoItem.js
-        Todo.js
-        Todos.js
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp App.js
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  TodoItem.js
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Todo.js
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Todos.js
+<br>
 index.js
+<br>
 index.css
         
 
