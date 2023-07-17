@@ -1,6 +1,6 @@
 <h1>Todo List Using React </h1>
 <hr>
-<p>This is a simple Todo List application built using React. It allows users to add, edit, and delete tasks, mark tasks as completed, and filter tasks based on their completion status.</p>
+<p>This is a simple Todo List application built using React. It allows users to add, edit, and delete tasks, mark tasks as completed . </p>
 
 <h3>Features</h3>
 <ul>
